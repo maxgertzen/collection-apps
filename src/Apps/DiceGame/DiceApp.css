@@ -1,0 +1,132 @@
+*[role='button'],
+button,
+.btn {
+	cursor: pointer;
+}
+
+body {
+	background-color: #ffe6d9;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+	height: 100vh;
+}
+
+div#root {
+	height: 100%;
+}
+
+.app-container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+}
+
+.game-container {
+	flex: 2;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.side-menu {
+	flex: 1;
+	height: auto;
+	background-color: #e8a392;
+	color: #000;
+	padding: 3em;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.side-menu h1 {
+	font-weight: 800;
+	color: #487e91;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 0 2px 0 #000;
+}
+
+.side-menu p,
+.side-menu h5 {
+	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+		0px 0px 0 #fff;
+}
+
+.side-menu img {
+	object-fit: scale-down;
+	width: 40%;
+	height: auto;
+}
+
+.user-choice {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	gap: 1em;
+	margin-top: 5em;
+}
+
+.container {
+	width: 100%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.user-view {
+	display: flex;
+	flex-flow: column nowrap;
+	margin-top: 2em;
+	justify-content: center;
+	align-items: center;
+}
+
+.user-btn {
+	margin: 1em;
+	padding: 0.5em 1em;
+	background-color: #5ab7d4;
+	border-radius: 2px;
+	border: 2px solid rgba(255, 227, 227, 0.336);
+	text-shadow: 1px 0.5px rgba(255, 227, 227, 0.336);
+	color: white;
+	transition: all 0.15s ease-in-out;
+}
+
+.user-btn:hover {
+	background-color: #ccf3ff;
+	color: #487e91;
+}
+
+.user-btn:active {
+	background-color: #487e91;
+	color: #ccf3ff;
+}
+
+.user-btn:disabled {
+	background-color: rgb(158, 158, 158);
+	color: black;
+	opacity: 0.5;
+}
+
+.user-selection {
+	padding: 1em 1em;
+	background-color: rgb(255, 255, 255);
+	width: 0.5em;
+	height: 0.5em;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 0px 0px 10px #ff0000;
+	border-radius: 50%;
+	cursor: default;
+}
+
+.board-score {
+	margin: 2em 0;
+}
+
+.msg {
+	margin-top: 1.2em;
+}
