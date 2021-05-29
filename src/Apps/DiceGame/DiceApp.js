@@ -31,7 +31,7 @@ function DiceApp() {
         setComputerSelection(0);
         setTimeout(() => {
             setComputerSelection(toNumber);
-        }, 1000)
+        }, 500)
     }
 
     const handleSelect = (number) => {

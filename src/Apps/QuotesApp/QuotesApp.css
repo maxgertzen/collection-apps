@@ -1,0 +1,97 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background-color: #f5f4eecb;
+}
+
+body #root {
+	height: 100%;
+}
+
+.app-container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.quote-box {
+	background-color: #f7f2cb;
+	width: 50vw;
+	height: 200px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 0 30px;
+}
+
+.quote-box blockquote {
+	margin: 1em 0;
+	color: #005248;
+	width: 80%;
+}
+
+.quote-box figcaption {
+	font-size: 0.85em;
+	font-style: italic;
+	color: #659b91;
+	align-self: center;
+}
+
+.scene {
+	box-shadow: 5px 5px 10px #618d8a;
+	background-color: #bed2b1;
+	padding: 1.5em;
+	color: #2f4858;
+}
+
+.icon-bar {
+	margin-top: 1em;
+	margin-bottom: -0.6em;
+	text-align: center;
+}
+
+.icon-bar svg {
+	cursor: pointer;
+	filter: contrast(0);
+	transition: filter 0.12s ease-in-out;
+}
+.icon-bar svg:hover {
+	filter: contrast(100%);
+}
+
+.quoteText-enter {
+	opacity: 0.01;
+}
+
+.quoteText-enter.quoteText-enter-active {
+	opacity: 1;
+	transition: opacity 500ms ease-in;
+}
+
+.quoteText-leave {
+	opacity: 1;
+}
+
+.quoteText-leave.quoteText-leave-active {
+	opacity: 0.01;
+	transition: opacity 300ms ease-in;
+}
+
+.quoteText-appear {
+	opacity: 0.01;
+}
+
+.quoteText-appear.quoteText-appear-active {
+	opacity: 1;
+	transition: opacity 0.5s ease-in;
+}
