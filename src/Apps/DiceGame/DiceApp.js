@@ -8,14 +8,14 @@ import { getRandomNumber } from './utils/randomizer'
 function DiceApp() {
     const [userScore, setUserScore] = useState(0)
     const [computerSelection, setComputerSelection] = useState(0);
-    const [userGuess, setUserGuess] = useState('');
+    const [userGuess, setUserGuess] = useState(0);
     const [userTotalThrows, setUserTotalThrows] = useState(0);
 
     useEffect(() => {
-        const isCorrect = () => {
-            if (userGuess) {
+        const isCorrect = (guess) => {
+            if (guess) {
                 let correct;
-                if (Number(userGuess) === computerSelection) {
+                if (guess === computerSelection) {
                     setUserScore(num => num + 1);
                     correct = true
                 } else {
@@ -24,8 +24,8 @@ function DiceApp() {
                 return correct
             }
         }
-        isCorrect()
-    }, [userGuess, computerSelection]);
+        isCorrect(userGuess)
+    }, [computerSelection]);
 
     const spin = (toNumber) => {
         setComputerSelection(0);
@@ -35,7 +35,7 @@ function DiceApp() {
     }
 
     const handleSelect = (number) => {
-        setUserGuess(number)
+        setUserGuess(Number(number))
     }
 
 

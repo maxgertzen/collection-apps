@@ -15,17 +15,19 @@
 }
 
 @keyframes full-spin {
-	from {
+	0%,
+	100% {
 		transform: translateZ(-100px) rotateX(0deg);
 		transform: translateZ(-100px) rotateY(0deg);
 	}
-	to {
+	50% {
 		transform: translateZ(-100px) rotateX(360deg);
 		transform: translateZ(-100px) rotateY(360deg);
 	}
 }
 .cube.show-0 {
-	animation: full-spin infinite;
+	animation: full-spin 3s ease infinite;
+	animation-fill-mode: both;
 }
 
 .cube.show-1 {
