@@ -7,14 +7,13 @@ button,
 body {
 	background-color: #ffe6d9;
 	font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-	height: 100vh;
 }
 
 div#root {
 	height: 100%;
 }
 
-.app-container {
+.app-container.dice-app {
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -129,4 +128,5 @@ div#root {
 
 .msg {
 	margin-top: 1.2em;
+	height: 10px;
 }

@@ -3,6 +3,8 @@ import Board from './containers/Board';
 import SideMenu from './containers/SideMenu';
 import User from './containers/User';
 import './DiceApp.css';
+import { useAudio } from '../../hooks/useAudio';
+import success from './assets/success.mp3';
 import { getRandomNumber } from './utils/randomizer'
 
 function DiceApp() {
@@ -10,6 +12,7 @@ function DiceApp() {
     const [computerSelection, setComputerSelection] = useState(0);
     const [userGuess, setUserGuess] = useState(0);
     const [userTotalThrows, setUserTotalThrows] = useState(0);
+    const [playingSuccess, toggleSuccessSound] = useAudio(success);
 
     useEffect(() => {
         const isCorrect = (guess) => {
@@ -18,6 +21,7 @@ function DiceApp() {
                 if (guess === computerSelection) {
                     setUserScore(num => num + 1);
                     correct = true
+                    toggleSuccessSound(correct)
                 } else {
                     correct = false;
                 }
@@ -53,11 +57,12 @@ function DiceApp() {
     }
 
     return (
-        <div className="app-container">
+        <div className="app-container dice-app">
             <SideMenu />
             <div className="game-container">
                 <Board diceThrow={computerSelection} score={userScore} total={userTotalThrows} />
                 <User userSelects={handleSelect} throwDice={handleThrowDice} guess={userGuess} />
+                <div className="msg text-center">{userGuess ? null : 'Take A Guess'}</div>
             </div>
         </div>)
 }

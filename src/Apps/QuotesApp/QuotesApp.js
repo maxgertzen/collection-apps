@@ -15,8 +15,8 @@ function QuotesApp() {
         fetchAnotherQuote()
     }, [])
     return (
-        <div className="app-container quote">
-            <div className="scene">
+        <div className="app-container quote-app">
+            <div className="quote-scene">
                 {
                     currentQuote ?
                         <QuoteDisplay quoteObj={currentQuote} />

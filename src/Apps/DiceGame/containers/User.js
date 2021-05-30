@@ -20,7 +20,6 @@ function User({ userSelects, throwDice, guess }) {
                 <ToggleGroup handleRadio={handleSelect} />
                 <UserSelectBox userSelection={userSelection} />
             </div>
-            {guess ? null : <div className="msg text-center">Take A Guess</div>}
         </div >
     )
 }

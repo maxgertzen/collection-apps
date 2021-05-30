@@ -11,6 +11,7 @@ function SideMenu() {
             <h5>
                 Good Luck!
             </h5>
+            <div className="msg text-center"></div>
         </aside>
     )
 }

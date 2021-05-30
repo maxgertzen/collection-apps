@@ -6,7 +6,6 @@
 }
 
 body {
-	height: 100vh;
 	background-color: #f5f4eecb;
 }
 
@@ -14,7 +13,7 @@ body #root {
 	height: 100%;
 }
 
-.app-container {
+.app-container.quote-app {
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -47,7 +46,7 @@ body #root {
 	align-self: center;
 }
 
-.scene {
+.quote-scene {
 	box-shadow: 5px 5px 10px #618d8a;
 	background-color: #bed2b1;
 	padding: 1.5em;
