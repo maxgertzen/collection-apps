@@ -7,12 +7,13 @@ import { useAudio } from '../../hooks/useAudio';
 import success from './assets/success.mp3';
 import { getRandomNumber } from './utils/randomizer'
 
+
 function DiceApp() {
     const [userScore, setUserScore] = useState(0)
     const [computerSelection, setComputerSelection] = useState(0);
     const [userGuess, setUserGuess] = useState(0);
     const [userTotalThrows, setUserTotalThrows] = useState(0);
-    const [playingSuccess, toggleSuccessSound] = useAudio(success);
+    const { toggle: toggleSuccessSound } = useAudio(success);
 
     useEffect(() => {
         const isCorrect = (guess) => {

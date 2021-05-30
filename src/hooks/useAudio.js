@@ -19,7 +19,7 @@ const useAudio = url => {
         };
     }, []);
 
-    return [playing, toggle];
+    return { playing, toggle };
 };
 
 export { useAudio }

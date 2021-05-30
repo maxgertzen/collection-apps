@@ -4,7 +4,6 @@ import { default as data } from '../assets/quotes.json';
 const api = ((obj) => {
     let { quotes: __quotes } = obj
     const getRandomQuote = () => {
-        console.log(__quotes);
         let randomIndex = Math.floor(Math.random() * __quotes.length);
         return __quotes[randomIndex]
     };
